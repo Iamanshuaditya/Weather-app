@@ -1,9 +1,8 @@
 # Weather App
 
 
+(![Screenshot (105)](https://github.com/Iamanshuaditya/Weather-app/assets/87059568/558e7a38-dd14-4669-be1f-289bfe10291c)
 
-![Weather App Screenshot](![Screenshot (105)](https://github.com/Iamanshuaditya/Weather-app/assets/87059568/558e7a38-dd14-4669-be1f-289bfe10291c)
-)
 
 
 ## Description
@@ -43,8 +42,8 @@ You can see a live demo of the Weather App [here](https://iamanshuaditya.github.
 
 
 
-![image](![Screenshot (105)](https://github.com/Iamanshuaditya/Weather-app/assets/87059568/aac38372-696c-4958-9931-1734a70abeea)
-)
+(![Screenshot (105)](https://github.com/Iamanshuaditya/Weather-app/assets/87059568/aac38372-696c-4958-9931-1734a70abeea)
+
 
 
 ## Contact
