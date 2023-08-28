@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather Forecast</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Weather Forecaster</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Weather
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Daily Forecast</a></li>
+                  <li><a class="dropdown-item" href="#">Weekly Forecast</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Interactive Maps</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search" id="myForm">
+              <input class="form-control me-2" type="search" placeholder="Search and places.." aria-label="Search" id="search">
+              <button class="btn btn-outline-success" type="submit" id="submit">Search..</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal text-body-emphasis">Weather for <span id="city">City</span></h1>
+        
+      </div>
+      </header>
+
+      <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Tempreatures</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title" id="temp">
+                  --<small class="text-body-secondary fw-light">°C</small>
+                </h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Temperature is <span class="temp-current">--</span></li>
+                    <li>Min-Temperature is <span class="temp-min">--</span></li>
+                    <li>Max-Temperature is <span class="temp-max">--</span></li>
+                  </ul>
+
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Humidity info</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                 <span id="humidity">61</span><small class="text-body-secondary fw-light">%</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Wind Degree <span id="wind-degree">--</span></li>
+                  <li>Feels Like <span id="Feels-like">--</span></li>
+                  <li>Humidity <span id="humidity-current">--</span></li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Wind Info</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                  <span id="wind">0</span><small class="text-body-secondary fw-light">km/hr</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Wind speed is <span>0</span></li>
+                  <li>Sunrise Time is <span id="sunrise"></span></li>
+                  <li>Sunset Time is <span id="sunset"></span></li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="display-6 text-center mb-4">Compare Weather Data</h2>
+
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th></th>
+                <th >Cloud_pct</th>
+                <th>Temp</th>
+                <th >Feels_like</th>
+                <th>max_temp </th>
+                <th>humidity</th>
+                <th>min_temp</th>
+                <th>wind_speed</th>
+                <th>wind_degrees</th>
+                <th>sunrise </th>
+                <th>sunset</th>
+              </tr>
+            </thead>
+            <tbody id="weatherTableBody">
+              <tr>
+                
+              </tr>
+              <tr>
+ 
+            </tbody>
+
+            
+            </tbody>
+          </table>
+        </div>
+      </main>
+
+      <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img
+              class="mb-2"
+              src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png"
+              alt=""
+              width="24"
+              height="19"
+            />
+            <small class="d-block mb-3 text-body-secondary"
+              >&copy; 2017–2023</small
+            >
+          </div>
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none" href="#"
+                  >Cool stuff</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none" href="#"
+                  >Random feature</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none" href="#"
+                  >Team feature</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none" href="#"
+                  >Stuff for developers</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none" href="#"
+                  >Another one</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none" href="#"
+                  >Last time</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none" href="#"
+                  >Resource</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none" href="#"
+                  >Resource name</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none" href="#"
+                  >Another resource</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none" href="#"
+                  >Final resource</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none" href="#">Team</a>
+              </li>
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none" href="#"
+                  >Locations</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none" href="#"
+                  >Privacy</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none" href="#"
+                  >Terms</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
